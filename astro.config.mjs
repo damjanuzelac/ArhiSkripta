@@ -6,21 +6,35 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Docs with Tailwind',
+			title: 'ArhiSpripta',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Uvod',
+					autogenerate: { directory: 'uvod' },
+					
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Osnove',
+					autogenerate: { directory: 'osnove' },
+				},
+				{
+					label: 'Regulativa',
+					autogenerate: { directory: 'regulativa' },
+				},
+				{
+					label: 'ZNR',
+					autogenerate: { directory: 'zaštita na radu' },
+				},
+				{
+					label: 'ZOP',
+					autogenerate: { directory: 'zaštita od požara' },
+				},
+				{
+					label: 'zgrade',
+					autogenerate: { directory: 'zgrade' },
 				},
 			],
 			customCss: ['./src/tailwind.css'],
